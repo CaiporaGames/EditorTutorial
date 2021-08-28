@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class ScriptExtension : MonoBehaviour
 {
@@ -19,9 +20,9 @@ public class ScriptExtension : MonoBehaviour
     //[Multiline(5)]
     public string title;
 
-    public Color defaultColor = Color.white;
+    public Color defaultColor = Color.white; 
 
-   
+
     // Update is called once per frame
     void Update()
     {
@@ -35,5 +36,8 @@ public class ScriptExtension : MonoBehaviour
         }
 
         GetComponent<Renderer>().material.color = defaultColor;
+
+        transform.GetChild(0).GetComponent<TextMeshPro>().text = title;
+
     }
 }

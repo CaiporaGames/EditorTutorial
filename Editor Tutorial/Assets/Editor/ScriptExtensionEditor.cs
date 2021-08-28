@@ -20,11 +20,15 @@ public class ScriptExtensionEditor : Editor
         extension.isVector = EditorGUILayout.Toggle(new GUIContent("Scaler", "É para usar o scaler float ou o vectorScaler ?"), false);
 
         extension.vectorScaler = EditorGUILayout.Vector3Field("Vector Scaler", extension.vectorScaler);
-        GUILayout.Label("Text Area");
         GUILayout.Space(15);
 
-        extension.title = EditorGUILayout.TextArea(extension.title, EditorStyles.boldLabel ,GUILayout.MinHeight(10));
+        EditorGUILayout.BeginHorizontal();
+        GUILayout.Label("Text Area");
+        extension.title = GUILayout.TextArea(extension.title);
+        EditorGUILayout.EndHorizontal();
 
-        extension.defaultColor = EditorGUILayout.ColorField("Default Color", extension.defaultColor);
+        GUILayout.Space(15);
+        extension.defaultColor = EditorGUILayout.ColorField("Default Color", extension.defaultColor);       
+
     }
 }
