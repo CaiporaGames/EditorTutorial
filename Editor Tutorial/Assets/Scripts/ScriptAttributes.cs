@@ -11,7 +11,10 @@ public class ScriptAttributes : MonoBehaviour
     [Space(15)]
 
     [Tooltip("É para usar o scaler float ou o vectorScaler?")][SerializeField] bool isVector = false;
-    [SerializeField] Vector3 vectorScaler = Vector3.one;  
+    [SerializeField] Vector3 vectorScaler = Vector3.one;
+
+    [TextArea]//Valor predeterminado
+    [SerializeField] string title;
 
     // Update is called once per frame
     void Update()

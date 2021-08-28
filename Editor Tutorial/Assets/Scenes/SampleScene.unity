@@ -418,11 +418,12 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1929392795}
+  - component: {fileID: 1929392797}
   - component: {fileID: 1929392794}
   - component: {fileID: 1929392793}
   - component: {fileID: 1929392792}
   - component: {fileID: 1929392791}
+  - component: {fileID: 1929392796}
   m_Layer: 0
   m_Name: Script Extension
   m_TagString: Untagged
@@ -442,7 +443,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1c64cbb6f92d3944b6f9345f5198d64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaler: 0
+  scaler: 5.33
   isVector: 0
   vectorScaler: {x: 1, y: 1, z: 1}
   title: 
@@ -509,8 +510,16 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1929392790}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1929392795
-Transform:
+--- !u!222 &1929392796
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1929392790}
+  m_CullTransparentMesh: 1
+--- !u!224 &1929392797
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -523,3 +532,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0.563}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}

@@ -5,22 +5,23 @@ using UnityEngine;
 public class ScriptExtension : MonoBehaviour
 {
 
-    [Header("Variables")]
+    //[Header("Variables")]
+    public float scaler;
 
-    [Range(0f, 10f)] [SerializeField] float scaler;
+    //[Space(15)]
 
-    [Space(15)]
+    //[Tooltip("É para usar o scaler float ou o vectorScaler?")] 
+    public bool isVector = false;
+    public Vector3 vectorScaler = Vector3.one;
 
-    [Tooltip("É para usar o scaler float ou o vectorScaler?")] [SerializeField] bool isVector = false;
-    [SerializeField] Vector3 vectorScaler = Vector3.one;
+    //[Header("Text Area")]    
+    //[Space(15)]
+    //[Multiline(5)]
+    public string title;
 
-    [Header("Text Area")]    
-    [Space(15)]
-    [Multiline(5)] [SerializeField] string title;
+    public Color defaultColor = Color.white;
 
-    //[Private Variables]
-    [HideInInspector] public Color defaultColor = Color.white;
-
+   
     // Update is called once per frame
     void Update()
     {
@@ -32,5 +33,7 @@ public class ScriptExtension : MonoBehaviour
         {
             gameObject.transform.localScale = new Vector3(scaler, scaler, scaler);
         }
+
+        GetComponent<Renderer>().material.color = defaultColor;
     }
 }
